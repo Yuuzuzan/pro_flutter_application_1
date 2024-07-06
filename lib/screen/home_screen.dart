@@ -11,19 +11,30 @@ class HomeScreen extends StatelessWidget {
         child: Text('Drawer'),
       ),
       appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: (){
-            Navigator.of(context).push(
-              MaterialPageRoute(
-              builder: (context) => const SecondScreen(),
-              ),
-            );
-          },
-          child: const Text('to Second Screen'),
+        title: Center(
+          child: Text('Home'),
         ),
+      ),
+      body: Container(
+        child: Row(
+          children: [
+            Container(
+              color: Colors.red,
+              width: 100,
+              height: 100,
+            ),
+            Container(
+              color: Colors.green,
+              width: 100,
+              height: 100,
+            ),
+            Container(
+              color: Colors.blue,
+              width: 100,
+              height: 100,
+            ),
+          ],
+        )
       ),
     );
   }
